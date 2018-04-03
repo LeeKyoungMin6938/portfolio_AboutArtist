@@ -14,6 +14,8 @@ public class LogoutAction implements Action {
 		String url = "AAServlet?command=index";
 		HttpSession session = request.getSession(false);
 		
+		
+		
 		if(session!=null) {
 			session.invalidate();
 		}
