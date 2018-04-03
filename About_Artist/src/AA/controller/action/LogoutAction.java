@@ -18,8 +18,6 @@ public class LogoutAction implements Action {
 		
 		
 		
-		
-		
 		if(session!=null) {
 			session.invalidate();
 		}
