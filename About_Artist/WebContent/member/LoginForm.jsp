@@ -23,7 +23,7 @@
   	<div class="input-group-prepend">
     	<span class="input-group-text" id="basic-addon1" style="font-size:1.5em;">비밀번호</span>
   	</div>
-  	<input type="text" class="form-control" placeholder="비밀번호를 입력하세요" aria-label="비밀번호" aria-describedby="basic-addon1" name="pwd">
+  	<input type="password" class="form-control" placeholder="비밀번호를 입력하세요" aria-label="비밀번호" aria-describedby="basic-addon1" name="pwd">
 </div>
 <hr>
 <input type="submit" value="로그인" class="submit">

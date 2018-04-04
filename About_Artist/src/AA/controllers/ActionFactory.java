@@ -29,6 +29,8 @@ public class ActionFactory {
 			action = new LoginFormAction();
 		}else if(command.equals("logout")) {
 			action = new LogoutAction();
+		}else if(command.equals("joinform")) {
+			
 		}
 		 
 		

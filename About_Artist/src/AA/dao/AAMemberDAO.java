@@ -63,6 +63,34 @@ public class AAMemberDAO {
 		return memberVO; 
 	}
 	
+	public int InsertMember(AAMemberVO memberVO) {
+		int result=0;
+		String sql = "insert into AA_Member(id,pwd,name,email,zip_num,address,phone) values(?,?,?,?,?,?,?)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberVO.getId());
+			pstmt.setString(2, memberVO.getPwd());
+			pstmt.setString(3, memberVO.getName());
+			pstmt.setString(4, memberVO.getEmail());
+			pstmt.setString(5, memberVO.getZip_num());
+			pstmt.setString(6, memberVO.getAddress());
+			pstmt.setString(7, memberVO.getPhone());
+			result = pstmt.executeUpdate(); 
+//			쿼리가 실행되면 1이 반환됨.리턴결과는 
+//			(1) INSERT, DELETE, UPDATE된 행의 수
+//			(2) 아무 리턴이 없으면 0
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}		
+		return result;
+	}
+	
 	
 	
 }
