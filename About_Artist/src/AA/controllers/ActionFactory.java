@@ -2,6 +2,8 @@ package AA.controllers;
 
 import AA.controller.action.Action;
 import AA.controller.action.IndexAction;
+import AA.controller.action.JoinAction;
+import AA.controller.action.JoinFormAction;
 import AA.controller.action.LoginAction;
 import AA.controller.action.LoginFormAction;
 import AA.controller.action.LogoutAction;
@@ -30,6 +32,10 @@ public class ActionFactory {
 		}else if(command.equals("logout")) {
 			action = new LogoutAction();
 		}else if(command.equals("joinform")) {
+			action = new JoinFormAction();
+		}else if(command.equals("join")) {
+			action = new JoinAction();
+		}else if(command.equals("id_check_form")){
 			
 		}
 		 

@@ -63,8 +63,8 @@ public class AAMemberDAO {
 		return memberVO; 
 	}
 	
-	public int InsertMember(AAMemberVO memberVO) {
-		int result=0;
+	public void InsertMember(AAMemberVO memberVO) {
+		
 		String sql = "insert into AA_Member(id,pwd,name,email,zip_num,address,phone) values(?,?,?,?,?,?,?)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -79,16 +79,14 @@ public class AAMemberDAO {
 			pstmt.setString(5, memberVO.getZip_num());
 			pstmt.setString(6, memberVO.getAddress());
 			pstmt.setString(7, memberVO.getPhone());
-			result = pstmt.executeUpdate(); 
-//			쿼리가 실행되면 1이 반환됨.리턴결과는 
-//			(1) INSERT, DELETE, UPDATE된 행의 수
-//			(2) 아무 리턴이 없으면 0
+			pstmt.executeUpdate(); 
+
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
 			DBManager.close(conn, pstmt);
 		}		
-		return result;
+		
 	}
 	
 	

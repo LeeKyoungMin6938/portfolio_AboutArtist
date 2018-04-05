@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/AboutArtist.css">
-<script type="text/javascript" src="../member/member.js"></script>
+<script type="text/javascript" src="./member/member.js"></script>
 <title>About Artist</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
 		<div class="container">		
 			<nav class="navbar-left">				
 				<a href="AAServlet?command=loginform"><button type="button" class="btn btn-info btn-lg">로그인</button></a>
-				<a href="AAServlet?command=joinform"><button type="button" class="btn btn-info btn-lg">회원가입</button></a>					
+				<button type="button" class="btn btn-info btn-lg" onclick="Join()">회원가입</button></a>					
 			</nav>		
 		</div>
 		</nav>
