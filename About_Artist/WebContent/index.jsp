@@ -24,7 +24,7 @@
 	      <div class="caption">
 	        <h3>아티스트 정보</h3>
 	        <p>다양한 정보를 보기쉽게 정리했습니다. 당신과의 공통점을 찾아보세요. </p>
-	        <p><a href="#" class="btn btn-primary" role="button">JOIN</a></p>
+	        <p><a href="AAServlet?command=" class="btn btn-primary" role="button">JOIN</a></p>
 	      </div>
 	    </div>
 	  </div>

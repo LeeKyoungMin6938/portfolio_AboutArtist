@@ -1,6 +1,7 @@
 package AA.controllers;
 
 import AA.controller.action.Action;
+import AA.controller.action.IdCheckAction;
 import AA.controller.action.IndexAction;
 import AA.controller.action.JoinAction;
 import AA.controller.action.JoinFormAction;
@@ -36,7 +37,7 @@ public class ActionFactory {
 		}else if(command.equals("join")) {
 			action = new JoinAction();
 		}else if(command.equals("id_check_form")){
-			
+			action = new IdCheckAction();
 		}
 		 
 		

@@ -17,7 +17,7 @@
   	<div class="input-group-prepend">
     	<span class="input-group-text" id="basic-addon1" style="font-size:1.5em;">아이디</span>
   	</div>
-  	<input type="text" class="form-control" placeholder="아이디를 입력하세요" aria-label="아이디" aria-describedby="basic-addon1" name="id">
+  	<input type="text" class="form-control" placeholder="${id }" aria-label="아이디" aria-describedby="basic-addon1" name="id">
 </div><hr>
 <div class="input-group mb-3">
   	<div class="input-group-prepend">

@@ -29,8 +29,7 @@ public class AAServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String command = request.getParameter("command");
-		System.out.println(command);
+		String command = request.getParameter("command");		
 		
 		ActionFactory af = ActionFactory.getInstance();
 		Action action = af.getAction(command);

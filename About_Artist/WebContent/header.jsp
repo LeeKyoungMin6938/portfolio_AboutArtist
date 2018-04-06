@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/AboutArtist.css">
 <script type="text/javascript" src="./member/member.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <title>About Artist</title>
 </head>
 <body>

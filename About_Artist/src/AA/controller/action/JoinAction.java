@@ -15,22 +15,19 @@ public class JoinAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "member/LoginForm.jsp";
-		HttpSession session = request.getSession();
+		
 		AAMemberVO memberVO = new AAMemberVO();
 		memberVO.setId(request.getParameter("id"));
 		memberVO.setPwd(request.getParameter("pwd"));
 		memberVO.setName(request.getParameter("name"));
 		memberVO.setEmail(request.getParameter("email"));
 		memberVO.setZip_num(request.getParameter("zip_num"));
-		memberVO.setAddress(request.getParameter("address"));
+		memberVO.setAddress(request.getParameter("address") + request.getParameter("address2"));
 		memberVO.setPhone(request.getParameter("phone"));
-		
-		session.setAttribute("id", request.getParameter("id"));
+				
 		AAMemberDAO memberDAO = AAMemberDAO.getInstance();
 		memberDAO.InsertMember(memberVO);
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);
+		
 		
 	}
 
